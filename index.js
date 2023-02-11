@@ -24,15 +24,10 @@ function hasValidPrice(product) {
 //En otras palabras, quiero transformar esto: [[1, 2], [3, 4]] en [1, 2, 3, 4].
 
 
-function flatten(arr) {
-  const result = []
-  for (let i = 0; i < arr.length; i++) {
-    for (let k = 0; k < arr[i].length; k++){
-      
-      result.push(arr[i][k]);
-    }
-  }
-   return result
+
+function flatten(arr){
+  let newArray = arr.flat(Infinity);
+  return newArray;
 }
 console.log(flatten([[1, 2], [3, 4]]))
 console.log(flatten([[1], [2], [3], [4]]))
